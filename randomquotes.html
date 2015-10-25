@@ -1,0 +1,41 @@
+<div id="txtQuote">
+
+</div>
+
+<script>
+var quotes=new Array();
+quotes[0]="\"In 1969 I gave up women and alcohol. It was the worst 20 minutes of my life.\" - George Best";
+quotes[1]="\"Some people believe football is a matter of life and death. I am very disappointed with that attitude. I can assure you it is much, much more important than that.\" - Bill Shankly";
+quotes[2]="\"They say 'go with the flow', but you know what else goes with the flow? Dead fish.\" - Roy Keane";
+quotes[3]="\"Behind every kick of the ball there has to be a thought.\" - Dennis Bergkamp";
+quotes[4]="\"Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do.\" - Pele"; 
+
+document.getElementById("txtQuote").innerHTML=quotes[Math.floor(Math.random() * (quotes.length-1))];
+
+var d = new Date();
+var day=d.getDay();
+
+var daynames=new Array();
+daynames[0]="Sunday";
+daynames[1]="Monday";
+daynames[2]="Tuesday";
+daynames[3]="Wednesday";
+daynames[4]="Thursday";
+daynames[5]="Friday";
+daynames[6]="Saturday";
+
+var descriptors=new Array();
+descriptors[0]=new Array("Serene","Supreme","Sonorous","Silent","Sleepy");
+descriptors[1]=new Array("Manic","Majestic","Monstrous","Mysterious","Magical");
+descriptors[2]=new Array("Twitchy","Twisted","Tenacious","Tempestous","Terse");
+descriptors[3]=new Array("Wicked","Wonderful","Whimsical","Whirlwind","Wishful");
+descriptors[4]=new Array("Terrific","Thunderous","Torrid","Tepid","Tingly");
+descriptors[5]=new Array("Fantastic","Friendly","Furious","Freaky","Frenetic");
+descriptors[6]=new Array("Sizzling","Salacious","Sinister","Silky","Scintillating");
+
+var textdiv=document.getElementById("HTML1");
+
+var replacetext=textdiv.innerHTML;
+replacetext=replacetext.replace("RandomQuote",descriptors[day][Math.floor(Math.random() * (descriptors[day].length-1))]+" "+daynames[day]);
+textdiv.innerHTML=replacetext;
+</script> 
