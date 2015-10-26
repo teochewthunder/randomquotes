@@ -1,2 +1,2 @@
-# wayangprogressbar
-The Wayang Progress Bar
+# randomquotes
+Random Quotes
